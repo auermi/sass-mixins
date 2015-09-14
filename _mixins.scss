@@ -1,0 +1,22 @@
+@mixin flexbox {
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+}
+@mixin flexbox-row {
+  @include flexbox;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+@mixin flexbox-column {
+  @include flexbox;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+@mixin hover-transition($property, $duration, $hover-value) {
+	transition: $property, $duration;
+	-webkit-transition: $property, $duration;
+  &:hover {
+    $property: $hover-value;
+  }
+}
