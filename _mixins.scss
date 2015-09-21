@@ -5,18 +5,18 @@
 }
 @mixin flexbox-row {
   @include flexbox;
-  -webkit-flex-direction: column;
-  flex-direction: column;
+  -webkit-flex-direction: row;
+  flex-direction: row;
 }
 @mixin flexbox-column {
   @include flexbox;
   -webkit-flex-direction: column;
   flex-direction: column;
 }
-@mixin hover-transition($property, $duration, $hover-value) {
-	transition: $property, $duration;
-	-webkit-transition: $property, $duration;
-  &:hover {
-    $property: $hover-value;
-  }
+@mixin hover-transition($hover-transition-values) {
+	transition: nth($hover-transition-values, 1), nth($hover-transition-values, 2);
+	-webkit-transition: nth($hover-transition-values, 1), nth($hover-transition-values, 2);
+  	&:hover {
+    	#{nth($hover-transition-values, 1)} : #{nth($hover-transition-values, 3)};
+  	}
 }
