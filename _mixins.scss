@@ -21,6 +21,20 @@
 	-webkit-flex-wrap: wrap;
   flex-wrap: wrap;
 }
+/* Background Image Center */
+@mixin background-image-center($img-url) {
+	background: center center no-repeat url($img-url);
+}
+/* Background Image Cover */
+@mixin background-image-cover($img-url) {
+	@include background-image-center;
+	background-size: cover;
+}
+/* Background Image Contain */
+@mixin background-image-cover($img-url) {
+	@include background-image-center;
+	background-size: contain;
+}
 /* Hover transition */
 @mixin hover-transition($hover-transition-values) {
 	transition: nth($hover-transition-values, 1), nth($hover-transition-values, 2);
