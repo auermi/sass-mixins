@@ -36,11 +36,11 @@
 	background-size: contain;
 }
 /* Hover transition */
-@mixin hover-transition($hover-transition-values) {
-	transition: nth($hover-transition-values, 1), nth($hover-transition-values, 2);
-	-webkit-transition: nth($hover-transition-values, 1), nth($hover-transition-values, 2);
-	-moz-transition: nth($hover-transition-values, 1), nth($hover-transition-values, 2);
+@mixin hover-transition($property, $duration, $end-value, $transition-timing: ease) {
+	transition: $property $duration $transition-timing;
+	-webkit-transition: $property $duration $transition-timing;
+	-moz-transition: $property $duration $transition-timing;
 	&:hover {
-		#{nth($hover-transition-values, 1)} : #{nth($hover-transition-values, 3)};
+		#{$property}: $end-value;
 	}
 }
