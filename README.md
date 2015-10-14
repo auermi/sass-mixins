@@ -2,4 +2,4 @@
 
 ## Overview
 
-A group of useful mixins I find to be useful
+A collection of mixins I've written and use on a daily basis.
