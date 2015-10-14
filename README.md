@@ -1,4 +1,4 @@
-# Sass-Mixins
+# sass-mixins
 
 ## Overview
 
