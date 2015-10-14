@@ -44,3 +44,10 @@
 		#{$property}: $end-value;
 	}
 }
+/* Transform */
+@mixin transform($transform-property) {
+	transform: $transform-property;
+  -webkit-transform: $transform-property;
+  -moz-transform: $transform-property;
+  -ms-transform: $transform-property;
+}
