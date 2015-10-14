@@ -16,6 +16,11 @@
 	-webkit-flex-direction: column;
 	flex-direction: column;
 }
+/* Flexbox Wrap */
+@mixin flebox-wrap {
+	-webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
 /* Hover transition */
 @mixin hover-transition($hover-transition-values) {
 	transition: nth($hover-transition-values, 1), nth($hover-transition-values, 2);
