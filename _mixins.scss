@@ -52,9 +52,9 @@
   -ms-transform: $transform-property;
 }
 /* Input field placeholder */
-@mixin input-placeholder-color($color) {
-	&::-webkit-input-placeholder { color: $color; }
-	&:-moz-placeholder { /* Firefox 18- */ color: $color; }
-	&::-moz-placeholder {  /* Firefox 19+ */ color: $color; }
-	&:-ms-input-placeholder { color: $color; }
+@mixin input-placeholder($color: initial, $font-size: initial, $font-weight: initial, $font-family: initial ) {
+	&::-webkit-input-placeholder { color: $color; font-size: $font-size; font-weight: $font-weight; font-family: $font-family; }
+	&:-moz-placeholder { /* Firefox 18- */ color: $color; font-size: $font-size; font-weight: $font-weight; font-family: $font-family; }
+	&::-moz-placeholder {  /* Firefox 19+ */ color: $color; font-size: $font-size; font-weight: $font-weight; font-family: $font-family; }
+	&:-ms-input-placeholder { color: $color; font-size: $font-size; font-weight: $font-weight; font-family: $font-family; }
 }
