@@ -21,6 +21,13 @@
 	-webkit-flex-wrap: wrap;
   flex-wrap: wrap;
 }
+/* Background-size */
+@mixin background-size($background-size-property) {
+	background-size: $background-size-property;
+	-moz-background-size: $background-size-property;
+	-o-background-size: $background-size-property;
+	-webkit-background-size: $background-size-property;
+}
 /* Background Image Center */
 @mixin background-image-center($img-url) {
 	background: center center no-repeat url($img-url);
@@ -28,12 +35,12 @@
 /* Background Image Cover */
 @mixin background-image-cover($img-url) {
 	@include background-image-center;
-	background-size: cover;
+	@include background-size(cover);
 }
 /* Background Image Contain */
 @mixin background-image-cover($img-url) {
 	@include background-image-center;
-	background-size: contain;
+	@include background-size(contain);
 }
 /* Hover transition */
 @mixin hover-transition($property, $duration, $end-value, $transition-timing: ease) {
