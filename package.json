@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/auermi/wasmuth/issues"
   },
-  "homepage": "https://github.com/auermi/wasmuth#readme"
+  "homepage": "https://github.com/auermi/wasmuth#readme",
+  "devDependencies": {
+    "grunt": "^0.4.5"
+  }
 }
