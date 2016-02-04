@@ -65,3 +65,15 @@
 	&::-moz-placeholder {  /* Firefox 19+ */ color: $color; font-size: $font-size; font-weight: $font-weight; font-family: $font-family; }
 	&:-ms-input-placeholder { color: $color; font-size: $font-size; font-weight: $font-weight; font-family: $font-family; }
 }
+/* Breakpoint Shorthand Example */
+@mixin bp($point) {
+    @if $point == 480up {
+        @media (min-width: em(480)) { @content; }
+    }
+    @else if $point == 600up {
+        @media (min-width: em(600)) { @content; }
+    }
+    @else if $point == 960up {
+        @media (min-width: em(960)) { @content; }
+    }
+}
